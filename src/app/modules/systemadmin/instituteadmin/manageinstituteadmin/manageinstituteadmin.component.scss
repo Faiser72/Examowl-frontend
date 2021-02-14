@@ -1,0 +1,72 @@
+.mainCard {
+    padding-top     : 20px;
+    // border       : 2px solid black;
+    border-radius   : 10px;
+}
+
+.circleImg {
+    width           : 75px;
+    height          : 75px;
+    border-radius   : 50%;
+    background-color: var(--main-font-3-color);
+}
+
+.mainCard {
+    // border    : 1px solid black;
+    overflow     : scroll;
+    height       : 12rem;
+    overflow-x   : hidden;
+    border       : 1px solid;
+    border-radius: 0%;
+    border-color : var(--main-font-3-color);
+}
+
+
+
+.hover:hover {
+    cursor          : pointer;
+    box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--main-font-3-color);
+    color           : white;
+    border-radius   : 20px;
+}
+
+.blue {
+    color: var(--main-font-3-color);
+}
+
+.pink {
+    color: var(--main-font-4-color);
+}
+
+.field-full-width {
+    width     : 100%;
+    margin-top: -15px;
+    font-size : 12px;
+}
+
+.title-header {
+    text-align: center;
+    color     : var(--main-font-3-color);
+}
+
+.icon:hover {
+    // font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.mat-form-field-search {
+    text-align: center;
+    font-size : 12px;
+    width     : 60%;
+}
+
+
+// for table ends here
+
+
+button {
+    width: 5rem;
+}

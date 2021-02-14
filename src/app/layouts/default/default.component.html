@@ -1,0 +1,83 @@
+<!-- <mat-toolbar id="mainToolbar" class="toolTip" color="primary">
+    <mat-icon (click)="onToolbarMenuToggle()" id="toolbarMenu" style="color: white;">subject</mat-icon>
+    My Awesome App
+    <span class="toolbar-spacer"></span>
+    <mat-icon class="toolbar-icon" matBadge="8" matBadgePosition="after" matBadgeColor="accent">notifications</mat-icon>
+    <li>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)='routeToChangePassword()'>
+                <mat-icon>vpn_key</mat-icon>
+                Change Password
+            </button>
+
+            <button mat-menu-item>
+                <mat-slide-toggle (change)="switchMode($event)" color="primary">Dark Mode
+                </mat-slide-toggle>
+            </button>
+
+            <button mat-menu-item (click)='doLogout()'>
+                <mat-icon>exit_to_app</mat-icon>
+                Sign Out
+            </button>
+        </mat-menu>
+    </li>
+</mat-toolbar> -->
+<app-header (toggleSideBarForMe)="sideBarToggler()" (darkModeSwitched)="switchMode($event)" [resultUrl]="data">
+</app-header>
+<mat-sidenav-container id="sidenavContainer" fullscreen>
+    <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
+        opened>
+        <mat-list id="menus">
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active" routerLink="/dashboard">
+                    <mat-icon>dashboard</mat-icon>
+                    Dashboard
+                </button>
+            </mat-list-item>
+
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active"
+                    routerLink="/addinstitute">
+                    <mat-icon> local_library</mat-icon>
+                    Institute
+                </button>
+            </mat-list-item>
+
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active"
+                    routerLink="/addinstituteadmin">
+                    <mat-icon>business</mat-icon>
+                    Institute Admin
+                </button>
+            </mat-list-item>
+
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active" routerLink="/addteacher">
+                    <mat-icon>work</mat-icon>
+                    Teacher
+                </button>
+            </mat-list-item>
+
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active" routerLink="/addstudent">
+                    <mat-icon>school</mat-icon>
+                    Student
+                </button>
+            </mat-list-item>
+
+            <mat-list-item (click)="currentUrl(); currentUrlTepm()">
+                <button class="menu-item" mat-flat-button routerLinkActive="list-item-active" routerLink="/addkeys">
+                    <mat-icon>vpn_key</mat-icon>
+                    Keys
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin, 'overflow.hidden': hidden }">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
