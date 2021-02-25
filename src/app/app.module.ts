@@ -16,7 +16,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
+    // NoopAnimationsModule,
     AppRoutingModule,
     MaterialModule,
     DefaultModule,

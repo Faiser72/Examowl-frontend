@@ -66,3 +66,17 @@
 .main-bg2 {
     color: var(--main-font-4-color);
 }
+
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer-content{
+    transition: 250ms;
+}
+
+mat-drawer{
+    transition: 250ms;
+}

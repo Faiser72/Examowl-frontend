@@ -27,8 +27,8 @@
 </mat-toolbar> -->
 <app-header (toggleSideBarForMe)="sideBarToggler()" (darkModeSwitched)="switchMode($event)" [resultUrl]="data">
 </app-header>
-<mat-sidenav-container id="sidenavContainer" fullscreen>
-    <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
+<mat-drawer-container id="sidenavContainer" fullscreen>
+    <mat-drawer mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
         opened>
         <mat-list id="menus">
             <mat-list-item (click)="currentUrl(); currentUrlTepm()">
@@ -75,9 +75,9 @@
                 </button>
             </mat-list-item>
         </mat-list>
-    </mat-sidenav>
+    </mat-drawer>
 
-    <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin, 'overflow.hidden': hidden }">
+    <mat-drawer-content [ngStyle]="{ 'margin-left.px': contentMargin, 'overflow.hidden': hidden }">
         <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-drawer-content>
+</mat-drawer-container>
